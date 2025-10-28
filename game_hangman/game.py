@@ -17,5 +17,22 @@ words =["בננה", "תפוח", "חציל", "עגבניה", "מלפפון", "מ�
 "בית", "בניין", "מדרגות", "קומה", "גג", "חדר", "מטבח", "אמבטיה", "שירותים", "סלון"]
 def choose_secret_word(words: list[str]) -> str:
     choose=random.choice(words)
-    secret=choose[::-1]
-    return secret
+    
+    return choose
+
+
+
+def init_state(max_tries: int) -> dict:
+    secret=choose_secret_word(words)
+    display=[ " _ "*len(secret) ]
+    guessed=(("utt"))
+    wrong_guessd=0
+    print(guessed)
+
+    return {
+        "secret":secret ,
+        "display":display,
+        "gussed":guessed,
+        "wrong_guessd":wrong_guessd,
+        "max_tries":max_tries
+        }

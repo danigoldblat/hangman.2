@@ -1,7 +1,7 @@
-import game_hangman.game
+from game_hangman.game import choose_secret_word, words, init_state
 
 
 
 if __name__ == "__main__":
-    choose_secret_word=game_hangman.game.choose_secret_word(game_hangman.game.words)
-    
+    state = init_state(8)
+    print(state)
